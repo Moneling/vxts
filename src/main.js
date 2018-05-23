@@ -2,6 +2,7 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import App from './App'
 import router from './routers'
+
 FastClick.attach(document.body)
 Vue.config.productionTip = false //禁止启动时生成生产提示
 

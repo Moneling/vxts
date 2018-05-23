@@ -1,8 +1,16 @@
 <template>
   <div id="app">
-    <v-header></v-header>
-    <router-view></router-view>
-    <v-lab></v-lab>
+    <div id="top"><v-header></v-header></div>
+    <div id="content">
+      <router-view></router-view>
+    </div>
+    <div id="bottom"><v-lab></v-lab> </div>
+    <!--  -->
+    <!-- <div id="mian-content"> -->
+      <!--  -->
+    <!-- </div> -->
+    <!--  -->
+    <!-- -->
   </div>
 </template>
 
@@ -13,7 +21,7 @@ export default {
   name: 'app',
   data(){
     return{
-      
+
     }
   },
   components:{
@@ -25,8 +33,31 @@ export default {
 
 <style lang="less">
 @import '~vux/src/styles/reset.less';
+@import '~vux/src/styles/1px.less';
+@import url("./style/index.less");
+  body {
+    background-color: #fbf9fe;
+  }
+  #top{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+ #bottom{
+    position: fixed;
+    bottom: 0;
+    padding: 0;
+    width: 100%;
+  }
 
-body {
-  background-color: #fbf9fe;
-}
+  #content{
+    padding-top: 45px;
+    padding-bottom: 45px;
+    width: 100%;
+    height: 100%;
+  }
 </style>
+
+

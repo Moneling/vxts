@@ -1,42 +1,40 @@
 <template>
     <div>
         <tabbar>
-        <tabbar-item>
-            <!-- <img slot="icon" src="../assets/demo/icon_nav_button.png"> -->
-            <x-icon type="ios-arrow-up" class="icon-red"></x-icon>
-            <span slot="label">Wechat</span>
+        <tabbar-item show-dot>
+            <!-- <img slot="icon" src="../assets/demo/icon_nav_button.png">  -->
+            <router-link slot="label" to="/market">市场</router-link>
         </tabbar-item>
         <tabbar-item show-dot>
             <!-- <img slot="icon" src="../assets/demo/icon_nav_msg.png"> -->
-            <span slot="label">Message</span>
+            <router-link slot="label" to="/home" class="active">主页</router-link>
         </tabbar-item>
-        <tabbar-item selected >
-            <!-- <img slot="icon" src="../assets/demo/icon_nav_article.png"> -->
-            <span slot="label">Explore</span>
-        </tabbar-item>
-        <tabbar-item badge="2">
-            <!-- <img slot="icon" src="../assets/demo/icon_nav_cell.png"> -->
-            <span slot="label">News</span>
+        <tabbar-item badge="4">
+            <!-- <img slot="icon" src="../../assets/bg.jpg"> -->
+           <router-link slot="label" to="/person">个人中心</router-link>
         </tabbar-item>
     </tabbar>
     </div>
 </template>
 
 <script>
-    import {Tabbar,TabbarItem} from 'vux'
+    import {Tabbar,TabbarItem,Badge,Cell} from 'vux'
     export default {
         name:'lab',
         data(){
             return {
-                msg:"this is Lab"
+                msg:"this is Lab",
+                active:'home'
             }
         },
         components:{
-            Tabbar,TabbarItem
+            Tabbar,TabbarItem,Badge,Cell
         }
     }
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
+    .active{
+        color: green;
+    }
 </style>

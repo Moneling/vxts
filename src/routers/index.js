@@ -1,12 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Lab from '../components/lab/Lab'
+import Home from '../components/home/home'
+import Person from '../components/person/person'
+import Market from '../components/market/market'
 
 Vue.use(Router)
 export default new Router({
     routes: [{
-        path: '/',
-        name: 'Lab',
-        component: Lab
+        path: '/home',
+        name: 'home',
+        component: Home
+    }, {
+        path: '/person',
+        name: 'person',
+        component: Person
+    }, {
+        path: '/market',
+        name: 'market',
+        component: Market
     }]
 })
